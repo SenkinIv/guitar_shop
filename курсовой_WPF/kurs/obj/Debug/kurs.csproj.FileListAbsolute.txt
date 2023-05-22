@@ -1,0 +1,84 @@
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\kurs.csproj.AssemblyReference.cache
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\kurs.csproj.SuggestedBindingRedirects.cache
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\MainWindow.g.cs
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\AddEditPage.g.cs
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\LoginPage.g.cs
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\App.g.cs
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\kurs_Content.g.cs
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\kurs_MarkupCompile.cache
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\kurs_MarkupCompile.lref
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\bin\Debug\kurs.exe.config
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\bin\Debug\kurs.exe
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\bin\Debug\kurs.pdb
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\bin\Debug\EntityFramework.dll
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\bin\Debug\EntityFramework.xml
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\App.baml
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\MainWindow.baml
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\AddEditPage.baml
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\LoginPage.baml
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\kurs.g.resources
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\kurs.Properties.Resources.resources
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\kurs.csproj.GenerateResource.cache
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\kurs.csproj.CoreCompileInputs.cache
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\kurs.csproj.CopyComplete
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\kurs.exe
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\kurs.pdb
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\GuitarPage1.g.cs
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\GuitarPage1.baml
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\RegistrationPage.g.cs
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\RegistrationPage.baml
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\MenuPage.g.cs
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\ProfilePage.g.cs
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\MenuPage.baml
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\ProfilePage.baml
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\bin\Debug\CheckTestLibrary.dll
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\bin\Debug\CheckTestLibrary.pdb
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\GuitarCart.g.cs
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\GuitarCart.baml
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\PrintPage.g.cs
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\kurs\obj\Debug\Pages\PrintPage.baml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\bin\Debug\kurs.exe.config
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\bin\Debug\kurs.exe
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\bin\Debug\kurs.pdb
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\bin\Debug\CheckTestLibrary.dll
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\bin\Debug\EntityFramework.dll
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\bin\Debug\EntityFramework.SqlServer.dll
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\bin\Debug\CheckTestLibrary.pdb
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\bin\Debug\EntityFramework.xml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\bin\Debug\EntityFramework.SqlServer.xml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\bin\Debug\ru\EntityFramework.resources.dll
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\kurs.csproj.AssemblyReference.cache
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\kurs.csproj.SuggestedBindingRedirects.cache
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\MainWindow.g.cs
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\AddEditPage.g.cs
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\GuitarCart.g.cs
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\GuitarPage1.g.cs
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\LoginPage.g.cs
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\MenuPage.g.cs
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\PrintPage.g.cs
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\ProfilePage.g.cs
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\RegistrationPage.g.cs
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\App.g.cs
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\kurs_Content.g.cs
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\kurs_MarkupCompile.cache
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\kurs_MarkupCompile.lref
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\App.baml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\MainWindow.baml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\AddEditPage.baml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\GuitarCart.baml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\GuitarPage1.baml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\LoginPage.baml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\MenuPage.baml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\PrintPage.baml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\ProfilePage.baml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\Pages\RegistrationPage.baml
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\kurs.g.resources
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\kurs.Properties.Resources.resources
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\kurs.csproj.GenerateResource.cache
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\kurs.csproj.CoreCompileInputs.cache
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\kurs.csproj.CopyComplete
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\kurs.exe
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\kurs\obj\Debug\kurs.pdb

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4fce7ab4581e47f8a2d47103222e235b" Name="Diagram1" ZoomLevel="106">
+        <EntityTypeShape EntityType="Model.guitar" Width="1.5" PointX="3" PointY="4.5" />
+        <EntityTypeShape EntityType="Model.guitar_category" Width="1.5" PointX="0.75" PointY="5.125" />
+        <EntityTypeShape EntityType="Model.guitar_supplier" Width="1.5" PointX="5.25" PointY="2" />
+        <EntityTypeShape EntityType="Model.guitar_warehouse" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="Model.role" Width="1.5" PointX="0.75" PointY="13.125" />
+        <EntityTypeShape EntityType="Model.Suppliers" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.users" Width="1.5" PointX="3" PointY="12.5" />
+        <EntityTypeShape EntityType="Model.users_guitar" Width="1.5" PointX="1" PointY="8.125" />
+        <EntityTypeShape EntityType="Model.warehouse" Width="1.5" PointX="3" PointY="8.875" />
+        <AssociationConnector Association="Model.FK_guitar_guitar_category" />
+        <AssociationConnector Association="Model.FK_guitar_supplier_guitar" />
+        <AssociationConnector Association="Model.FK_guitar_warehouse_guitar" />
+        <AssociationConnector Association="Model.FK_users_guitar_guitar" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="Model.FK_guitar_supplier_Suppliers" />
+        <AssociationConnector Association="Model.FK_guitar_warehouse_warehouse" />
+        <AssociationConnector Association="Model.FK_users_role" />
+        <AssociationConnector Association="Model.FK_users_guitar_users" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

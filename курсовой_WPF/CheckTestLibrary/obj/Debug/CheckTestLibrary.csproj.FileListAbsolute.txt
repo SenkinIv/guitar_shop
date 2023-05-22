@@ -1,0 +1,12 @@
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\CheckTestLibrary\bin\Debug\CheckTestLibrary.dll
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\CheckTestLibrary\bin\Debug\CheckTestLibrary.pdb
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\CheckTestLibrary\obj\Debug\CheckTestLibrary.csproj.AssemblyReference.cache
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\CheckTestLibrary\obj\Debug\CheckTestLibrary.csproj.CoreCompileInputs.cache
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\CheckTestLibrary\obj\Debug\CheckTestLibrary.dll
+C:\Users\vanya\OneDrive\Desktop\курсовой WPF\CheckTestLibrary\obj\Debug\CheckTestLibrary.pdb
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\CheckTestLibrary\bin\Debug\CheckTestLibrary.dll
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\CheckTestLibrary\bin\Debug\CheckTestLibrary.pdb
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\CheckTestLibrary\obj\Debug\CheckTestLibrary.csproj.AssemblyReference.cache
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\CheckTestLibrary\obj\Debug\CheckTestLibrary.csproj.CoreCompileInputs.cache
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\CheckTestLibrary\obj\Debug\CheckTestLibrary.dll
+D:\лишнее\колледж\питпм и рпм\рпм\курсовой WPF\курсовой WPF\CheckTestLibrary\obj\Debug\CheckTestLibrary.pdb

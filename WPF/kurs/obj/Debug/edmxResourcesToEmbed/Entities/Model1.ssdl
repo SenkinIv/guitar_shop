@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="guitar">
+    <Key>
+      <PropertyRef Name="id_guitar" />
+    </Key>
+    <Property Name="id_guitar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cost" Type="int" />
+    <Property Name="Image" Type="image" />
+    <Property Name="Discount" Type="int" />
+    <Property Name="id_category" Type="int" />
+  </EntityType>
+  <EntityType Name="guitar_category">
+    <Key>
+      <PropertyRef Name="id_category" />
+    </Key>
+    <Property Name="id_category" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="guitar_supplier">
+    <Key>
+      <PropertyRef Name="id_guitar" />
+      <PropertyRef Name="id_supplier" />
+    </Key>
+    <Property Name="id_guitar" Type="int" Nullable="false" />
+    <Property Name="id_supplier" Type="int" Nullable="false" />
+    <Property Name="amount" Type="int" />
+  </EntityType>
+  <EntityType Name="guitar_warehouse">
+    <Key>
+      <PropertyRef Name="id_guitar" />
+      <PropertyRef Name="id_warehouse" />
+    </Key>
+    <Property Name="id_guitar" Type="int" Nullable="false" />
+    <Property Name="id_warehouse" Type="int" Nullable="false" />
+    <Property Name="amount" Type="int" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="id_role" />
+    </Key>
+    <Property Name="id_role" Type="int" Nullable="false" />
+    <Property Name="role_name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="id_suppllier" />
+    </Key>
+    <Property Name="id_suppllier" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Street" Type="nvarchar" MaxLength="50" />
+    <Property Name="House" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id_users" />
+    </Key>
+    <Property Name="id_users" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_role" Type="int" />
+    <Property Name="login" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="image" />
+  </EntityType>
+  <EntityType Name="users_guitar">
+    <Key>
+      <PropertyRef Name="id_users_guitar" />
+    </Key>
+    <Property Name="id_users_guitar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_users" Type="int" Nullable="false" />
+    <Property Name="id_guitar" Type="int" Nullable="false" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="Image" Type="image" />
+  </EntityType>
+  <EntityType Name="warehouse">
+    <Key>
+      <PropertyRef Name="id_warehouse" />
+    </Key>
+    <Property Name="id_warehouse" Type="int" Nullable="false" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Street" Type="nvarchar" MaxLength="50" />
+    <Property Name="House" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_guitar_guitar_category">
+    <End Role="guitar_category" Type="Self.guitar_category" Multiplicity="0..1" />
+    <End Role="guitar" Type="Self.guitar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="guitar_category">
+        <PropertyRef Name="id_category" />
+      </Principal>
+      <Dependent Role="guitar">
+        <PropertyRef Name="id_category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_guitar_supplier_guitar">
+    <End Role="guitar" Type="Self.guitar" Multiplicity="1" />
+    <End Role="guitar_supplier" Type="Self.guitar_supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="guitar">
+        <PropertyRef Name="id_guitar" />
+      </Principal>
+      <Dependent Role="guitar_supplier">
+        <PropertyRef Name="id_guitar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_guitar_supplier_Suppliers">
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="1" />
+    <End Role="guitar_supplier" Type="Self.guitar_supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="id_suppllier" />
+      </Principal>
+      <Dependent Role="guitar_supplier">
+        <PropertyRef Name="id_supplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_guitar_warehouse_guitar">
+    <End Role="guitar" Type="Self.guitar" Multiplicity="1" />
+    <End Role="guitar_warehouse" Type="Self.guitar_warehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="guitar">
+        <PropertyRef Name="id_guitar" />
+      </Principal>
+      <Dependent Role="guitar_warehouse">
+        <PropertyRef Name="id_guitar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_guitar_warehouse_warehouse">
+    <End Role="warehouse" Type="Self.warehouse" Multiplicity="1" />
+    <End Role="guitar_warehouse" Type="Self.guitar_warehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehouse">
+        <PropertyRef Name="id_warehouse" />
+      </Principal>
+      <Dependent Role="guitar_warehouse">
+        <PropertyRef Name="id_warehouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_guitar_guitar">
+    <End Role="guitar" Type="Self.guitar" Multiplicity="1" />
+    <End Role="users_guitar" Type="Self.users_guitar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="guitar">
+        <PropertyRef Name="id_guitar" />
+      </Principal>
+      <Dependent Role="users_guitar">
+        <PropertyRef Name="id_guitar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_guitar_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="users_guitar" Type="Self.users_guitar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id_users" />
+      </Principal>
+      <Dependent Role="users_guitar">
+        <PropertyRef Name="id_users" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_role">
+    <End Role="role" Type="Self.role" Multiplicity="0..1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="id_role" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="id_role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StoreContainer">
+    <EntitySet Name="guitar" EntityType="Self.guitar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="guitar_category" EntityType="Self.guitar_category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="guitar_supplier" EntityType="Self.guitar_supplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="guitar_warehouse" EntityType="Self.guitar_warehouse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users_guitar" EntityType="Self.users_guitar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="warehouse" EntityType="Self.warehouse" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_guitar_guitar_category" Association="Self.FK_guitar_guitar_category">
+      <End Role="guitar_category" EntitySet="guitar_category" />
+      <End Role="guitar" EntitySet="guitar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_guitar_supplier_guitar" Association="Self.FK_guitar_supplier_guitar">
+      <End Role="guitar" EntitySet="guitar" />
+      <End Role="guitar_supplier" EntitySet="guitar_supplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_guitar_supplier_Suppliers" Association="Self.FK_guitar_supplier_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="guitar_supplier" EntitySet="guitar_supplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_guitar_warehouse_guitar" Association="Self.FK_guitar_warehouse_guitar">
+      <End Role="guitar" EntitySet="guitar" />
+      <End Role="guitar_warehouse" EntitySet="guitar_warehouse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_guitar_warehouse_warehouse" Association="Self.FK_guitar_warehouse_warehouse">
+      <End Role="warehouse" EntitySet="warehouse" />
+      <End Role="guitar_warehouse" EntitySet="guitar_warehouse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_guitar_guitar" Association="Self.FK_users_guitar_guitar">
+      <End Role="guitar" EntitySet="guitar" />
+      <End Role="users_guitar" EntitySet="users_guitar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_guitar_users" Association="Self.FK_users_guitar_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="users_guitar" EntitySet="users_guitar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_role" Association="Self.FK_users_role">
+      <End Role="role" EntitySet="role" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

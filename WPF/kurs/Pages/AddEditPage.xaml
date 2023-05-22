@@ -1,0 +1,73 @@
+﻿<Page x:Class="kurs.Pages.AddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kurs.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Добавление товара" Loaded="Page_Loaded">
+
+    <Grid Background="#332F2C">
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <StackPanel VerticalAlignment="Top" Height="380">
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" Text="Название" Foreground="White" Width="65"></TextBlock>
+                    <TextBox Style="{ StaticResource AEP}" Name="TBoxTitle"  Width="150"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  VerticalAlignment="Center" Text="Стоимость" Foreground="White" Width="65"></TextBlock>
+                    <TextBox Style="{ StaticResource AEP}" Name="TBoxCost" Width="150" MaxLength="7"/>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Тип гитары" TextWrapping="Wrap" Foreground="White" Width="65"></TextBlock>
+                    <ComboBox Style="{StaticResource Combo }" Margin ="10,0,0,0"  Width="150"  Name="ComboType"  
+                              IsEditable="True" IsReadOnly="True" Text="Тип гитары" >
+
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" Text="Скидка" Foreground="White" Width="65"></TextBlock>
+                    <TextBox Style="{StaticResource AEP}" x:Name="TBoxDiscount"  Width="150"/>
+                </StackPanel>
+                <StackPanel>
+                    <Button x:Name="BtnBack" Content="Назад" Click="BtnBack_Click" Margin="5,220,10,0" Width="100" Style="{StaticResource btn}" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Left" >
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+                    <Border Margin="5" Height="300" Width="150" BorderBrush="#ff9c1a" BorderThickness="1">
+                        <Image Name="ImageGuitar"></Image>
+                    </Border>
+                    <Button Style="{StaticResource btn}" FontSize="14" Height="25" Width="150" Margin="5" Name="BtnSelectImage"
+                            Click="BtnSelectImage_Click" Content="Выбрать фотографию">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button Style="{StaticResource btn}" FontSize="14" Height="25" Width="150" Margin="5" Name="BtnSave"
+                            Click="BtnSave_Click" Content="Сохранить">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

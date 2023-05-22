@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="GuitarShop" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="guitar" EntityType="Model.guitar" />
+    <EntitySet Name="guitar_category" EntityType="Model.guitar_category" />
+    <EntitySet Name="guitar_supplier" EntityType="Model.guitar_supplier" />
+    <EntitySet Name="guitar_warehouse" EntityType="Model.guitar_warehouse" />
+    <EntitySet Name="role" EntityType="Model.role" />
+    <EntitySet Name="Suppliers" EntityType="Model.Suppliers" />
+    <EntitySet Name="users" EntityType="Model.users" />
+    <EntitySet Name="users_guitar" EntityType="Model.users_guitar" />
+    <EntitySet Name="warehouse" EntityType="Model.warehouse" />
+    <AssociationSet Name="FK_guitar_guitar_category" Association="Model.FK_guitar_guitar_category">
+      <End Role="guitar_category" EntitySet="guitar_category" />
+      <End Role="guitar" EntitySet="guitar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_guitar_supplier_guitar" Association="Model.FK_guitar_supplier_guitar">
+      <End Role="guitar" EntitySet="guitar" />
+      <End Role="guitar_supplier" EntitySet="guitar_supplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_guitar_warehouse_guitar" Association="Model.FK_guitar_warehouse_guitar">
+      <End Role="guitar" EntitySet="guitar" />
+      <End Role="guitar_warehouse" EntitySet="guitar_warehouse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_guitar_guitar" Association="Model.FK_users_guitar_guitar">
+      <End Role="guitar" EntitySet="guitar" />
+      <End Role="users_guitar" EntitySet="users_guitar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_guitar_supplier_Suppliers" Association="Model.FK_guitar_supplier_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="guitar_supplier" EntitySet="guitar_supplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_guitar_warehouse_warehouse" Association="Model.FK_guitar_warehouse_warehouse">
+      <End Role="warehouse" EntitySet="warehouse" />
+      <End Role="guitar_warehouse" EntitySet="guitar_warehouse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_role" Association="Model.FK_users_role">
+      <End Role="role" EntitySet="role" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_guitar_users" Association="Model.FK_users_guitar_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="users_guitar" EntitySet="users_guitar" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="guitar">
+    <Key>
+      <PropertyRef Name="id_guitar" />
+    </Key>
+    <Property Name="id_guitar" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cost" Type="Int32" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Discount" Type="Int32" />
+    <Property Name="id_category" Type="Int32" />
+    <NavigationProperty Name="guitar_category" Relationship="Model.FK_guitar_guitar_category" FromRole="guitar" ToRole="guitar_category" />
+    <NavigationProperty Name="guitar_supplier" Relationship="Model.FK_guitar_supplier_guitar" FromRole="guitar" ToRole="guitar_supplier" />
+    <NavigationProperty Name="guitar_warehouse" Relationship="Model.FK_guitar_warehouse_guitar" FromRole="guitar" ToRole="guitar_warehouse" />
+    <NavigationProperty Name="users_guitar" Relationship="Model.FK_users_guitar_guitar" FromRole="guitar" ToRole="users_guitar" />
+  </EntityType>
+  <EntityType Name="guitar_category">
+    <Key>
+      <PropertyRef Name="id_category" />
+    </Key>
+    <Property Name="id_category" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="guitar" Relationship="Model.FK_guitar_guitar_category" FromRole="guitar_category" ToRole="guitar" />
+  </EntityType>
+  <EntityType Name="guitar_supplier">
+    <Key>
+      <PropertyRef Name="id_guitar" />
+      <PropertyRef Name="id_supplier" />
+    </Key>
+    <Property Name="id_guitar" Type="Int32" Nullable="false" />
+    <Property Name="id_supplier" Type="Int32" Nullable="false" />
+    <Property Name="amount" Type="Int32" />
+    <NavigationProperty Name="guitar" Relationship="Model.FK_guitar_supplier_guitar" FromRole="guitar_supplier" ToRole="guitar" />
+    <NavigationProperty Name="Suppliers" Relationship="Model.FK_guitar_supplier_Suppliers" FromRole="guitar_supplier" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="guitar_warehouse">
+    <Key>
+      <PropertyRef Name="id_guitar" />
+      <PropertyRef Name="id_warehouse" />
+    </Key>
+    <Property Name="id_guitar" Type="Int32" Nullable="false" />
+    <Property Name="id_warehouse" Type="Int32" Nullable="false" />
+    <Property Name="amount" Type="Int32" />
+    <NavigationProperty Name="guitar" Relationship="Model.FK_guitar_warehouse_guitar" FromRole="guitar_warehouse" ToRole="guitar" />
+    <NavigationProperty Name="warehouse" Relationship="Model.FK_guitar_warehouse_warehouse" FromRole="guitar_warehouse" ToRole="warehouse" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="id_role" />
+    </Key>
+    <Property Name="id_role" Type="Int32" Nullable="false" />
+    <Property Name="role_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="users" Relationship="Model.FK_users_role" FromRole="role" ToRole="users" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="id_suppllier" />
+    </Key>
+    <Property Name="id_suppllier" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="House" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="guitar_supplier" Relationship="Model.FK_guitar_supplier_Suppliers" FromRole="Suppliers" ToRole="guitar_supplier" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id_users" />
+    </Key>
+    <Property Name="id_users" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_role" Type="Int32" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="role" Relationship="Model.FK_users_role" FromRole="users" ToRole="role" />
+    <NavigationProperty Name="users_guitar" Relationship="Model.FK_users_guitar_users" FromRole="users" ToRole="users_guitar" />
+  </EntityType>
+  <EntityType Name="users_guitar">
+    <Key>
+      <PropertyRef Name="id_users_guitar" />
+    </Key>
+    <Property Name="id_users_guitar" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_users" Type="Int32" Nullable="false" />
+    <Property Name="id_guitar" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="guitar" Relationship="Model.FK_users_guitar_guitar" FromRole="users_guitar" ToRole="guitar" />
+    <NavigationProperty Name="users" Relationship="Model.FK_users_guitar_users" FromRole="users_guitar" ToRole="users" />
+  </EntityType>
+  <EntityType Name="warehouse">
+    <Key>
+      <PropertyRef Name="id_warehouse" />
+    </Key>
+    <Property Name="id_warehouse" Type="Int32" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="House" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="guitar_warehouse" Relationship="Model.FK_guitar_warehouse_warehouse" FromRole="warehouse" ToRole="guitar_warehouse" />
+  </EntityType>
+  <Association Name="FK_guitar_guitar_category">
+    <End Type="Model.guitar_category" Role="guitar_category" Multiplicity="0..1" />
+    <End Type="Model.guitar" Role="guitar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="guitar_category">
+        <PropertyRef Name="id_category" />
+      </Principal>
+      <Dependent Role="guitar">
+        <PropertyRef Name="id_category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_guitar_supplier_guitar">
+    <End Type="Model.guitar" Role="guitar" Multiplicity="1" />
+    <End Type="Model.guitar_supplier" Role="guitar_supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="guitar">
+        <PropertyRef Name="id_guitar" />
+      </Principal>
+      <Dependent Role="guitar_supplier">
+        <PropertyRef Name="id_guitar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_guitar_warehouse_guitar">
+    <End Type="Model.guitar" Role="guitar" Multiplicity="1" />
+    <End Type="Model.guitar_warehouse" Role="guitar_warehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="guitar">
+        <PropertyRef Name="id_guitar" />
+      </Principal>
+      <Dependent Role="guitar_warehouse">
+        <PropertyRef Name="id_guitar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_guitar_guitar">
+    <End Type="Model.guitar" Role="guitar" Multiplicity="1" />
+    <End Type="Model.users_guitar" Role="users_guitar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="guitar">
+        <PropertyRef Name="id_guitar" />
+      </Principal>
+      <Dependent Role="users_guitar">
+        <PropertyRef Name="id_guitar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_guitar_supplier_Suppliers">
+    <End Type="Model.Suppliers" Role="Suppliers" Multiplicity="1" />
+    <End Type="Model.guitar_supplier" Role="guitar_supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="id_suppllier" />
+      </Principal>
+      <Dependent Role="guitar_supplier">
+        <PropertyRef Name="id_supplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_guitar_warehouse_warehouse">
+    <End Type="Model.warehouse" Role="warehouse" Multiplicity="1" />
+    <End Type="Model.guitar_warehouse" Role="guitar_warehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehouse">
+        <PropertyRef Name="id_warehouse" />
+      </Principal>
+      <Dependent Role="guitar_warehouse">
+        <PropertyRef Name="id_warehouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_role">
+    <End Type="Model.role" Role="role" Multiplicity="0..1" />
+    <End Type="Model.users" Role="users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="id_role" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="id_role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_guitar_users">
+    <End Type="Model.users" Role="users" Multiplicity="1" />
+    <End Type="Model.users_guitar" Role="users_guitar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id_users" />
+      </Principal>
+      <Dependent Role="users_guitar">
+        <PropertyRef Name="id_users" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
